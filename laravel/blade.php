@@ -122,6 +122,9 @@ class Blade {
 			return $value;
 		}
 
+		// Fire and event
+		Event::fire('blade.layout', $value);
+
 		// First we'll split out the lines of the template so we can get the
 		// the layout from the top of the template. By convention it must
 		// be located on the first line of the template contents.
